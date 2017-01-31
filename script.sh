@@ -1,14 +1,6 @@
 #!/bin/bash
-echo
-echo
- 
-echo "======================================="
-echo "-----welcome to eenadu downloader----- "
-echo "======================================="
-echo
-echo "please give the date to download"
-read d
-for i in 2016_08_$d
+
+for i in 2016_{01..12}_{1..31}
 do
     wget https://dl.dropboxusercontent.com/u/79920565/"$i"_main/"$i"_main_{1..16}.pdf
     pdfunite "$i"_main_{1..16}.pdf  "$i".pdf
